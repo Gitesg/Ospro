@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>event sync - Splash Screen</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #2a2a2a;
+    overflow: hidden;
+  }
+  
+  .splash-container {
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    animation: logoAnimation 3s ease-in-out infinite alternate;
+  }
+  
+  .bounce {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: bounceAnimation 2s linear infinite;
+  }
+  
+  .red { background-color: #ff5733; }
+  .blue { background-color: #33a1ff; }
+  .green { background-color: #33ff57; }
+  .yellow { background-color: #faff33; }
+  
+  @keyframes logoAnimation {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounceAnimation {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+  }
+</style>
+</head>
+<body>
+<div class="splash-container">
+  <div class="logo">event sync</div>
+  
+  <div class="bounce red" style="left: 20%;"></div>
+  <div class="bounce blue" style="left: 40%;"></div>
+  <div class="bounce green" style="left: 60%;"></div>
+  <div class="bounce blue" style="left: 80%;"></div>
+</div>
+<script>
+  // Simulate loading or transition to the main content after a delay
+  setTimeout(function() {
+    window.location.href = 'Home_page.html'; // Replace 'main.html' with your actual main content page
+  }, 10000); // Change the delay time as needed (in milliseconds)
+</script>
+</body>
+</html>
