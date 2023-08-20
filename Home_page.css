@@ -27,6 +27,11 @@ body {
     font-size: 24px;
     font-weight: bold;
 }
+#EventSync_logo{
+    height: 50px;
+    width: 50px;
+    margin-left: 1px;
+}
 
 .nav-menu {
     list-style: none;
@@ -141,6 +146,44 @@ p {
     color: white;
     margin: 0 10px;
     text-decoration: none;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    /* border: 0.1px solid black; */
+    border-radius: 10px;
+    max-height: 250px;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes carouselAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    33.33% {
+        transform: translateX(-100%);
+    }
+    66.66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 @media (max-width: 768px) {

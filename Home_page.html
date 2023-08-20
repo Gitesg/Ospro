@@ -9,7 +9,9 @@
 <body>
     <header class="header">
         <nav class="nav">
-            <div class="logo">EventSync</div>
+            <div class="logo">
+                <!-- <img src="C:\Users\91801\Downloads\EventSync_\EventSync_logo.png" id="EventSync_logo"> -->
+                EventSync</div>
             <ul class="nav-menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Events</a></li>
@@ -19,6 +21,19 @@
             </ul>
         </nav>
     </header>
+    <section class="carousel">
+        <div class="carousel-slides">
+            <div class="carousel-slide">
+                <img src="C:\Users\91801\Downloads\EventSync_\Hack_1.png" alt="Image 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="C:\Users\91801\Downloads\EventSync_\Hack_2.png" alt="Image 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="C:\Users\91801\Downloads\EventSync_\Hack_3.png" alt="Image 3">
+            </div>
+        </div>
+    </section>    
     <section class="hero">
         <div class="hero-content">
             <h1><span id="typing-text"></span></h1>
@@ -66,8 +81,27 @@
     }
 
     window.addEventListener("load", function () {
-        typeText(typingText, typingSpan, 100); // Adjust the delay as needed
+        typeText(typingText, typingSpan, 100);
     });
 </script>
 
+<script>
+    const carousel = document.querySelector(".carousel");
+const slideContainer = document.querySelector(".carousel-slides");
+const slides = document.querySelectorAll(".carousel-slide");
+let slideIndex = 0;
+
+function showSlide(index) {
+    slideContainer.style.transform = `translateX(-${index * 100}%)`;
+}
+
+function nextSlide() {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+}
+
+showSlide(slideIndex);
+setInterval(nextSlide, 2000);
+
+</script>
 </html>
