@@ -21,11 +21,11 @@
     </header>
     <section class="hero">
         <div class="hero-content">
-            <h1>Welcome to The EventSync Portal</h1>
+            <h1><span id="typing-text"></span></h1>
             <p>Explore exciting events and publications in one place.</p>
             <a href="#" class="cta-button">Get Started</a>
         </div>
-    </section>
+    </section>    
     <section class="features">
         <div class="feature">
             <h2>Discover Events</h2>
@@ -47,4 +47,27 @@
         </div>
     </footer>
 </body>
+<script>
+    const typingText = "Welcome to The EventSync Portal";
+    const typingSpan = document.getElementById("typing-text");
+
+    function typeText(text, spanElement, delay) {
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                spanElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, delay);
+            }
+        }
+
+        type();
+    }
+
+    window.addEventListener("load", function () {
+        typeText(typingText, typingSpan, 100); // Adjust the delay as needed
+    });
+</script>
+
 </html>
