@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, nav, main, footer {
+            padding: 20px;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav li {
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#events">Manage Events</a></li>
+            <li><a href="#participants">Participants</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="events">
+            <h2>Manage Events</h2>
+            <button id="createEvent">Create Event</button>
+        </section>
+        <section id="participants">
+            <h2>Participants</h2>
+           
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 EventSync . All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const createEventButton = document.getElementById("createEvent");
+            
+            createEventButton.addEventListener("click", function () {
+                
+                alert("Create event functionality goes here.");
+            });
+        });
+    </script>
+</body>
+</html>
